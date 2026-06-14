@@ -1,0 +1,5 @@
+# Datos de runtime de MySQL (volumen Docker) — no versionar
+practica-10-docker/src/datadir/
+
+# Logs de crash de VirtualBox
+*-VBoxHeadless-*.log

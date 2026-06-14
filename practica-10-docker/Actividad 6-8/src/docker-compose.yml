@@ -1,0 +1,18 @@
+services:
+  web:
+    build: .
+    ports:
+      - "8080:80"
+    depends_on:
+      - db
+
+  db:
+    image: mysql:8.0
+    command: --general-log=1 --general-log-file=/var/lib/mysql/general.log
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpass
+      MYSQL_DATABASE: stepan_db
+      MYSQL_USER: stepan
+      MYSQL_PASSWORD: stepanpass
+    volumes:
+      - ./datadir:/var/lib/mysql
